@@ -19,21 +19,21 @@ public class PFBiblioteca{
         ArrayList<String>Romance = new ArrayList<>();
         //  Listas
         ArrayList<ArrayList<String>> booksOnStock = new ArrayList<>(); // lista de almacenamiento de libros en existencia | sub listas en base a géneros/autores
-        booksOnStock.add(Terror);
-        booksOnStock.add(Novelas);
-        booksOnStock.add(Ficcion);
-        booksOnStock.add(Aventuras);
-        booksOnStock.add(Clasicos);
-        booksOnStock.add(Drama);
-        booksOnStock.add(Mitologia);
-        booksOnStock.add(Cuentos);
-        booksOnStock.add(Romance);
-            
+            booksOnStock.add(Terror);
+            booksOnStock.add(Novelas);
+            booksOnStock.add(Ficcion);
+            booksOnStock.add(Aventuras);
+            booksOnStock.add(Clasicos);
+            booksOnStock.add(Drama);
+            booksOnStock.add(Mitologia);
+            booksOnStock.add(Cuentos);
+            booksOnStock.add(Romance);
+
         ArrayList<String> Users = new ArrayList<>();
         // Interfaz de usuario
         /*
-                *  Añadir funciones si hacen falta, de forma progresiva
-                */
+        *  Añadir funciones si hacen falta, de forma progresiva
+        */
         System.out.println("Bienvenido a la biblioteca virtual en Java");
         System.out.println("¿Qué tarea desea realizar?");
         System.out.println();
