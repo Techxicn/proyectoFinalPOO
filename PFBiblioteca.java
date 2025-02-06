@@ -3,6 +3,13 @@ import java.util.ArrayList;
 // <THIS>  hace alusion a si mismo, 
 public class PFBiblioteca{
 
+    public static void printMenu(Scanner scanner){
+        System.out.println("Bienvenido a la biblioteca virtual en Java");
+        System.out.println("¿Qué tarea desea realizar?");
+        System.out.println();
+        System.out.println("\n 1.- Buscar libro. \n 2.- Solicitar libros (max. 2).\n 3.- Registrar nuevo usuario.\n 4.- Registrar/devolver libro.\n 5.-  ");
+    }
+
     public static void printStock(ArrayList<ArrayList<String>> booksOnStock){
         // Lista de nombres de generos (actualizable)
         ArrayList<String>genderNick = new ArrayList<>();
@@ -27,6 +34,8 @@ public class PFBiblioteca{
         //Variables
         String newUserRegist;               // registo de nuevos usuarios | variable acumulada en una lista
         String newBookRegist;                // registro de un nuevo ingreso de un libro 
+        Scanner scanner = new Scanner(System.in);
+        
         // Listas de géneros 
         ArrayList<String> Terror = new ArrayList<>();
         ArrayList<String> Ficcion = new ArrayList<>();
@@ -57,15 +66,34 @@ public class PFBiblioteca{
         /*
         *  Añadir funciones si hacen falta, de forma progresiva
         */
-        System.out.println("Bienvenido a la biblioteca virtual en Java");
-        System.out.println("¿Qué tarea desea realizar?");
-        System.out.println();
-        System.out.println("\n 1.- Buscar libro. \n 2.- Solicitar libros (max. 2).\n 3.- Registrar nuevo usuario.\n 4.- Registrar/devolver libro.\n 5.-  ");
-    
-        printStock(booksOnStock);
+        printMenu(scanner);
+        int userChoise = scanner.nextInt();
 
-        Libro libro1 = new Libro("It", "Stephen King", "Terror", 5);
+        switch (userChoise) {
+            case 1:
+                    //  Buscar libro
+                    System.out.println("Aguanta");
+                break;
+            case 2:
+                    //  Prestar libros
+                    System.out.println("Aguanta");
+                break;
+            case 3: 
+                    // Registrar nuevo usuario
+                    System.out.println("Aguanta");
+                break;
+            case 4: 
+                    //  Registrar nuevo libro / devolver 
+                    System.out.println("Aguanta");
+                break;
+        
+            default:
+                System.out.println("Opción no válida, intentelo de nuevo.");
+                printMenu(scanner);
+        }
 
-        libro1.mostrarInfo();
+//        printStock(booksOnStock);
+//        Libro libro1 = new Libro("It", "Stephen King", "Terror", 5);
+//        libro1.mostrarInfo();
     }
 }
