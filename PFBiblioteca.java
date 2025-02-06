@@ -38,7 +38,7 @@ public class PFBiblioteca{
         for(int i = 0; i < booksOnStock.size(); i++){
             for(int j = 0; j < booksOnStock.get(i).size(); j++){
                 //System.out.println(booksOnStock.get(i).get(j));
-                if(busqueda.contentEquals(booksOnStock.get(i).get(j))){
+                if(booksOnStock.get(i).get(j).contains(busqueda)){
                     System.out.println(booksOnStock.get(i).get(j));
                 }else{
                     continue;
