@@ -63,5 +63,9 @@ public class PFBiblioteca{
         System.out.println("\n 1.- Buscar libro. \n 2.- Solicitar libros (max. 2).\n 3.- Registrar nuevo usuario.\n 4.- Registrar/devolver libro.\n 5.-  ");
     
         printStock(booksOnStock);
+
+        Libro libro1 = new Libro("It", "Stephen King", "Terror", 5);
+
+        libro1.mostrarInfo();
     }
 }
