@@ -28,7 +28,24 @@ public class PFBiblioteca{
             System.out.println(); 
         }
     }
+    public static void imprimirTodoLibros(ArrayList<ArrayList<String>> booksOnStock){
+        for(int i = 0; i < booksOnStock.size(); i++)
+            System.out.println(booksOnStock.get(i));
+    }    
+    public static void buscarLibro(ArrayList<ArrayList<String>> booksOnStock){
+        for(int i = 0; i < booksOnStock.size(); i++){
+            for(int j = 0; j < booksOnStock.size(); j++){
+                System.out.println(booksOnStock.get(i).get(j));
 
+
+
+
+            }
+            
+        }
+    }
+
+    }
     public static void main(String[] args){
 
         //Variables
@@ -56,10 +73,15 @@ public class PFBiblioteca{
             Terror.add("The Shinning");
             Terror.add("The Haunting of Hill House");
             booksOnStock.add(Ficcion);
+            Ficcion.add("Alicia en el pais de las maravillas");
             booksOnStock.add(Romance);
+            Romance.add("Titanic");
             booksOnStock.add(Comedia);
+            Comedia.add("La mama de la mama");
             booksOnStock.add(Documentales);
+            Documentales.add("Los perros en la jungla");
             booksOnStock.add(Infantiles);
+            Infantiles.add("Doki");
 
         ArrayList<String> Users = new ArrayList<>();
         // Interfaz de usuario
@@ -72,7 +94,11 @@ public class PFBiblioteca{
         switch (userChoise) {
             case 1:
                     //  Buscar libro
-                    System.out.println("Aguanta");
+                    System.out.println("Registro de todos los libros (prueba):");
+                    imprimirTodoLibros(booksOnStock);
+                    System.out.println("Busque el nombre del libro por el título:");
+                    buscarLibro(booksOnStock);
+
                 break;
             case 2:
                     //  Prestar libros
@@ -91,6 +117,11 @@ public class PFBiblioteca{
                 System.out.println("Opción no válida, intentelo de nuevo.");
                 printMenu(scanner);
         }
+    
+
+
+
+
 
 //        printStock(booksOnStock);
 //        Libro libro1 = new Libro("It", "Stephen King", "Terror", 5);

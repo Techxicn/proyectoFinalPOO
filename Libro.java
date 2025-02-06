@@ -17,7 +17,7 @@ public class Libro {
         public void mostrarInfo() {
             System.out.println("Título: " + titulo);
             System.out.println("Autor: " + autor);
-            System.out.printlnfs("Gènero " + genero);
+            System.out.println("Gènero " + genero);
             if(estado>0){
                 System.out.println("En stock: " + estado);
             }else{
