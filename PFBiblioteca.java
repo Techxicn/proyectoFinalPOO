@@ -38,8 +38,9 @@ public class PFBiblioteca{
 
         //  Listas 
 
-            //  Lista de generos
-        ArrayList<ArrayList<String>> booksOnStock = new ArrayList<>(); // lista de almacenamiento de libros en existencia | sub listas en base a géneros/autores
+        //  Lista de generos
+            // lista de almacenamiento de libros en existencia | sub listas en base a géneros/autores
+        ArrayList<ArrayList<String>> booksOnStock = new ArrayList<>(); 
             booksOnStock.add(Terror);
             Terror.add("It");
             Terror.add("Dracula");
