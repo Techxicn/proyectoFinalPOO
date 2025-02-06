@@ -32,10 +32,17 @@ public class PFBiblioteca{
         for(int i = 0; i < booksOnStock.size(); i++)
             System.out.println(booksOnStock.get(i));
     }    
-    public static void buscarLibro(ArrayList<ArrayList<String>> booksOnStock){
+    public static void buscarLibro(ArrayList<ArrayList<String>> booksOnStock, Scanner scanner){
+        String busqueda = scanner.nextLine();
+        System.out.println("Resultados:");
         for(int i = 0; i < booksOnStock.size(); i++){
             for(int j = 0; j < booksOnStock.get(i).size(); j++){
-                System.out.println(booksOnStock.get(i).get(j));
+                //System.out.println(booksOnStock.get(i).get(j));
+                if(booksOnStock.get(i).get(j).contains(busqueda)){
+                    System.out.println(booksOnStock.get(i).get(j));
+                }else{
+                    continue;
+                }
 
 
 
@@ -96,10 +103,11 @@ public class PFBiblioteca{
         switch (userChoise) {
             case 1:
                     //  Buscar libro
+                    scanner.nextLine(); //limpiar buffer
                     System.out.println("Registro de todos los libros (prueba):");
                     imprimirTodoLibros(booksOnStock);
                     System.out.println("Busque el nombre del libro por el título:");
-                    buscarLibro(booksOnStock);
+                    buscarLibro(booksOnStock, scanner);
 
                 break;
             case 2:
