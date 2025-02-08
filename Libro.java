@@ -12,6 +12,10 @@ public class Libro {
             this.genero = genero;
             this.estado = estado;
         }
+
+        public String toString(){
+            return "Título: " + titulo + "\n Autor: " + autor + "\n Género: " + genero + "\n Stock: " + estado + "\n";
+        }
     
         // Método para mostrar información del libro
         public void mostrarInfo() {
