@@ -57,8 +57,8 @@ public class PFBiblioteca{
     public static void main(String[] args){
 
         //Variables
-        //String newUserRegist;               // registo de nuevos usuarios | variable acumulada en una lista
-        //String newBookRegist;                // registro de un nuevo ingreso de un libro 
+        String newUserRegist;               // registo de nuevos usuarios | variable acumulada en una lista
+        String newBookRegist;                // registro de un nuevo ingreso de un libro 
         Scanner scanner = new Scanner(System.in);
         
         
