@@ -115,9 +115,9 @@ public class PFBiblioteca{
 
         System.out.println();
 
-        //printStock(booksStock);
+        printStock(booksStock);
 
-        System.out.println(booksStock.get(1).get(1));
+        //System.out.println(booksStock.get(1).get(1));
 
         //imprimirTodoLibros(booksStock);
 
