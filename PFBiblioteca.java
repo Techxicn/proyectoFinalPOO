@@ -20,7 +20,6 @@ public class PFBiblioteca{
             genderNick.add("Documentales");
             genderNick.add("Infantiles");
 
-
         for (int i = 0; i < genderNick.size(); i++) {
             System.out.println("Género: " + genderNick.get(i));
             for (Libro stock : booksStock.get(i)){
@@ -28,27 +27,24 @@ public class PFBiblioteca{
             }
             System.out.println(); 
         }
-        
-    }
-    public static void imprimirTodoLibros(ArrayList<ArrayList<String>> booksOnStock){
-        for(int i = 0; i < booksOnStock.size(); i++)
-            System.out.println(booksOnStock.get(i));
-    }   
-    public static void buscarLibro(ArrayList<ArrayList<String>> booksOnStock, Scanner scanner){
+
+        }
+
+/*    public static void buscarLibro(ArrayList<ArrayList<Libro>> booksStock, Scanner scanner){
         String busqueda = scanner.nextLine();
         System.out.println("Resultados:");
-        for(int i = 0; i < booksOnStock.size(); i++){
-            for(int j = 0; j < booksOnStock.get(i).size(); j++){
+        for(int i = 0; i < booksStock.size(); i++){
+            for(int j = 0; j < booksStock.get(i).size(); j++){
                 //System.out.println(booksOnStock.get(i).get(j));
-                if(booksOnStock.get(i).get(j).contains(busqueda)){
-                    System.out.println(booksOnStock.get(i).get(j));
+                if(booksStock.get(i).get(j).contains(busqueda)){
+                    System.out.println(booksStock.get(i).get(j));
                 }else{
                     continue;
                 }
             }
         }
     }
-
+*/
     public static void main(String[] args){
 
         //Variables
@@ -66,7 +62,6 @@ public class PFBiblioteca{
         ArrayList<Libro> Comedia = new ArrayList<>();
         ArrayList<Libro> Documentales = new ArrayList<>();
         ArrayList<Libro> Infantiles = new ArrayList<>();
-
 
             //  Lista de stock
         ArrayList<ArrayList<Libro>> booksStock = new ArrayList<>(); // lista de almacenamiento de libros en existencia | sub listas en base a géneros/autores
@@ -113,9 +108,7 @@ public class PFBiblioteca{
 
         printStock(booksStock);
 
-//                //  Impresion de la lista de stock
-//                for (Libro book : booksStock){
-//                    System.out.println(book);        
+        System.out.println();       
 
 //        int userChoise = scanner.nextInt();
 //
