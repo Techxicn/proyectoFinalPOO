@@ -29,14 +29,19 @@ public class PFBiblioteca{
         }
         
     }
-    public static void imprimirTodoLibros(ArrayList<ArrayList<Libro>> booksStock){
-        for(int i = 0; i < booksStock.size(); i++){
-            for(int j = 0; j < booksStock.get(i).size(); j++){
-                System.out.println(booksStock.get(i).get(i));
-            
-            }
-        }
-    }  
+
+//      FUNCION DESCARTADA          
+
+//    public static void imprimirTodoLibros(ArrayList<ArrayList<Libro>> booksStock){
+//        for(int i = 0; i < booksStock.size(); i++){
+//            for(int j = 0; j < booksStock.get(i).size(); j++){
+//                System.out.println(booksStock.get(i).get(i));
+//            
+//            }
+//        }
+//    } 
+
+//      En espera de adaptacion 
     /*  
     public static void buscarLibro(ArrayList<ArrayList<Libro>> booksStock, Scanner scanner){
         String busqueda = scanner.nextLine();
@@ -111,16 +116,11 @@ public class PFBiblioteca{
                 Infantiles.add(new Libro("Donde Viven los Monstruos", "Maurice Sendak", "Infantiles", 5));
                 Infantiles.add(new Libro("Alicia en el País de las Maravillas", "Lewis Carroll", "Infantiles", 5));
 
-        printMenu(scanner);
-
+//        printMenu(scanner);
         System.out.println();
-
-        //printStock(booksStock);
-
-        System.out.println(booksStock.get(1).get(1));
-
-        //imprimirTodoLibros(booksStock);
-
+        System.out.println("Prueba de busqueda - " + booksStock.get(1).get(1));
+        System.out.println();
+        printStock(booksStock);
         System.out.println();       
 
 //        int userChoise = scanner.nextInt();

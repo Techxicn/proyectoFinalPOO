@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Libro {
         // Atributos
-        static String titulo;
+        String titulo;
         String autor;
         String genero;
         int estado;   
