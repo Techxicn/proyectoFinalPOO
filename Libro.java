@@ -31,8 +31,4 @@ public class Libro {
             }
         }
 
-        public ArrayList<ArrayList<Libro>> get(String titulo2) {
-            // TODO Auto-generated method stub
-            throw new UnsupportedOperationException("Unimplemented method 'get'");
-        }
     }

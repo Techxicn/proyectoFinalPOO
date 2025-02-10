@@ -20,7 +20,6 @@ public class PFBiblioteca{
             genderNick.add("Documentales");
             genderNick.add("Infantiles");
 
-
         for (int i = 0; i < genderNick.size(); i++) {
             System.out.println("***Género: " + genderNick.get(i)+ "***\n");
             for (Libro stock : booksStock.get(i)){
@@ -73,7 +72,6 @@ public class PFBiblioteca{
         ArrayList<Libro> Documentales = new ArrayList<>();
         ArrayList<Libro> Infantiles = new ArrayList<>();
 
-
             //  Lista de stock
         ArrayList<ArrayList<Libro>> booksStock = new ArrayList<>(); // lista de almacenamiento de libros en existencia | sub listas en base a géneros/autores
             booksStock.add(Terror);
@@ -123,9 +121,7 @@ public class PFBiblioteca{
 
         //imprimirTodoLibros(booksStock);
 
-//                //  Impresion de la lista de stock
-//                for (Libro book : booksStock){
-//                    System.out.println(book);        
+        System.out.println();       
 
 //        int userChoise = scanner.nextInt();
 /*  
