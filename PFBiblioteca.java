@@ -22,32 +22,38 @@ public class PFBiblioteca{
 
 
         for (int i = 0; i < genderNick.size(); i++) {
-            System.out.println("Género: " + genderNick.get(i));
+            System.out.println("***Género: " + genderNick.get(i)+ "***\n");
             for (Libro stock : booksStock.get(i)){
-                System.out.println("  - " + stock);
+                System.out.println(" " + stock);
             }
             System.out.println(); 
         }
         
     }
-    public static void imprimirTodoLibros(ArrayList<ArrayList<String>> booksOnStock){
-        for(int i = 0; i < booksOnStock.size(); i++)
-            System.out.println(booksOnStock.get(i));
-    }   
-    public static void buscarLibro(ArrayList<ArrayList<String>> booksOnStock, Scanner scanner){
+    public static void imprimirTodoLibros(ArrayList<ArrayList<Libro>> booksStock){
+        for(int i = 0; i < booksStock.size(); i++){
+            for(int j = 0; j < booksStock.get(i).size(); j++){
+                System.out.println(booksStock.get(i).get(i));
+            
+            }
+        }
+    }  
+    /*  
+    public static void buscarLibro(ArrayList<ArrayList<Libro>> booksStock, Scanner scanner){
         String busqueda = scanner.nextLine();
         System.out.println("Resultados:");
-        for(int i = 0; i < booksOnStock.size(); i++){
-            for(int j = 0; j < booksOnStock.get(i).size(); j++){
-                //System.out.println(booksOnStock.get(i).get(j));
-                if(booksOnStock.get(i).get(j).contains(busqueda)){
-                    System.out.println(booksOnStock.get(i).get(j));
+        for(int i = 0; i < booksStock.size(); i++){
+            for(int j = 0; j < booksStock.get(i).size(); j++){
+                //System.out.println(booksStock.get(i).get(j));
+                if(booksStock.get(i).get(j).contains(busqueda)){
+                    System.out.println(booksStock.get(i).get(j));
                 }else{
                     continue;
                 }
             }
         }
     }
+        */
 
     public static void main(String[] args){
 
@@ -111,40 +117,44 @@ public class PFBiblioteca{
 
         System.out.println();
 
-        printStock(booksStock);
+        //printStock(booksStock);
+
+        System.out.println(booksStock.get(1).get(1));
+
+        //imprimirTodoLibros(booksStock);
 
 //                //  Impresion de la lista de stock
 //                for (Libro book : booksStock){
 //                    System.out.println(book);        
 
 //        int userChoise = scanner.nextInt();
-//
-//        switch (userChoise) {
-//            case 1:
-//                    //  Buscar libro
-//                    scanner.nextLine(); //limpiar buffer
-//                    System.out.println("Registro de todos los libros (prueba):");
-//                    imprimirTodoLibros(booksOnStock);
-//                    System.out.println("Busque el nombre del libro por el título:");
-//                    buscarLibro(booksOnStock, scanner);
-//
-//                break;
-//            case 2:
-//                    //  Prestar libros
-//                    System.out.println("Aguanta");
-//                break;
-//            case 3: 
-//                    // Registrar nuevo usuario
-//                    System.out.println("Aguanta");
-//                break;
-//            case 4: 
-//                    //  Registrar nuevo libro / devolver 
-//                    System.out.println("Aguanta");
-//                break;
-//        
-//            default:
-//                System.out.println("Opción no válida, intentelo de nuevo.");
-//                printMenu(scanner);
-//        }
-    }
+/*  
+        switch (userChoise) {          
+            case 1:
+                    //  Buscar libro
+                    scanner.nextLine(); //limpiar buffer
+                    System.out.println("Registro de todos los libros (prueba):");
+                    //imprimirTodoLibros(booksStock);
+                    System.out.println("Busque el nombre del libro por el título:");
+                    buscarLibro(booksStock, scanner);
+
+                break;
+            case 2:
+                    //  Prestar libros
+                    System.out.println("Aguanta");
+                break;
+            case 3: 
+                    // Registrar nuevo usuario
+                    System.out.println("Aguanta");
+                break;
+            case 4: 
+                    //  Registrar nuevo libro / devolver 
+                    System.out.println("Aguanta");
+                break;
+        
+            default:
+                System.out.println("Opción no válida, intentelo de nuevo.");
+                printMenu(scanner);
+*/
+    }  
 }

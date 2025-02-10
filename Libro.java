@@ -1,6 +1,8 @@
+import java.util.ArrayList;
+
 public class Libro {
         // Atributos
-        String titulo;
+        static String titulo;
         String autor;
         String genero;
         int estado;   
@@ -27,5 +29,10 @@ public class Libro {
             }else{
                 System.out.println("Sin stock: " + estado);
             }
+        }
+
+        public ArrayList<ArrayList<Libro>> get(String titulo2) {
+            // TODO Auto-generated method stub
+            throw new UnsupportedOperationException("Unimplemented method 'get'");
         }
     }
