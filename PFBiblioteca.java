@@ -2,42 +2,27 @@ import java.util.Scanner;
 import java.util.ArrayList;
 // <THIS>  hace alusion a si mismo, 
 public class PFBiblioteca{
+    //Variables
+    private String newUserRegist;               // registo de nuevos usuarios | variable acumulada en una lista
+    private String newBookRegist;                // registro de un nuevo ingreso de un libro 
+    private Scanner scanner = new Scanner(System.in);
 
-    public static void printMenu(Scanner scanner){
+    public static void printMenu(){
         System.out.println("Bienvenido a la biblioteca virtual en Java");
         System.out.println("¿Qué tarea desea realizar?");
-        System.out.println();
         System.out.println("\n 1.- Buscar libro. \n 2.- Solicitar libros (max. 2).\n 3.- Registrar nuevo usuario.\n 4.- Registrar/devolver libro.\n 5.-  ");
     }
-
+    
     public static void printStock(ArrayList<ArrayList<Libro>> booksStock){
-        // Lista de nombres de generos (actualizable)
-        ArrayList<String>genderNick = new ArrayList<>();
-            genderNick.add("Terror");
-            genderNick.add("Ficcion");
-            genderNick.add("Romance");
-            genderNick.add("Comedia");
-            genderNick.add("Documentales");
-            genderNick.add("Infantiles");
-
-        for (int i = 0; i < genderNick.size(); i++) {
-            System.out.println("***Género: " + genderNick.get(i)+ "***\n");
-            for (Libro stock : booksStock.get(i)){
-                System.out.println(" " + stock);
-            }
-            System.out.println(); 
-        }
-        
-    }
-    public static void imprimirTodoLibros(ArrayList<ArrayList<Libro>> booksStock){
         for(int i = 0; i < booksStock.size(); i++){
+            System.out.println("***Género: " + booksStock.get(i).get(0).getGenero() + "***\n");
             for(int j = 0; j < booksStock.get(i).size(); j++){
-                System.out.println(booksStock.get(i).get(i));
+                System.out.println(booksStock.get(i).get(j));
             
             }
         }
     }  
-    /*  
+/*    
     public static void buscarLibro(ArrayList<ArrayList<Libro>> booksStock, Scanner scanner){
         String busqueda = scanner.nextLine();
         System.out.println("Resultados:");
@@ -52,17 +37,9 @@ public class PFBiblioteca{
             }
         }
     }
-        */
+*/  
 
     public static void main(String[] args){
-
-        //Variables
-        String newUserRegist;               // registo de nuevos usuarios | variable acumulada en una lista
-        String newBookRegist;                // registro de un nuevo ingreso de un libro 
-        Scanner scanner = new Scanner(System.in);
-        
-        
-
         //  Listas 
             // Listas de géneros 
         ArrayList<Libro> Terror = new ArrayList<>();
@@ -111,20 +88,13 @@ public class PFBiblioteca{
                 Infantiles.add(new Libro("Donde Viven los Monstruos", "Maurice Sendak", "Infantiles", 5));
                 Infantiles.add(new Libro("Alicia en el País de las Maravillas", "Lewis Carroll", "Infantiles", 5));
 
-        printMenu(scanner);
+        printMenu();
+        
+        printStock(booksStock);       
 
         System.out.println();
-
-        printStock(booksStock);
-
-        //System.out.println(booksStock.get(1).get(1));
-
-        //imprimirTodoLibros(booksStock);
-
-        System.out.println();       
-
-//        int userChoise = scanner.nextInt();
-/*  
+/* 
+        int userChoise = scanner.nextInt();
         switch (userChoise) {          
             case 1:
                     //  Buscar libro
