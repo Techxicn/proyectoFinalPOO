@@ -1,6 +1,8 @@
+import java.util.ArrayList;
+
 public class Libro {
         // Atributos
-        String titulo;
+        static String titulo;
         String autor;
         String genero;
         int estado;   
@@ -11,6 +13,10 @@ public class Libro {
             this.autor = autor;
             this.genero = genero;
             this.estado = estado;
+        }
+
+        public String toString(){
+            return "Título: " + titulo + "\n Autor: " + autor + "\n Género: " + genero + "\n Stock: " + estado + "\n";
         }
     
         // Método para mostrar información del libro
@@ -24,4 +30,5 @@ public class Libro {
                 System.out.println("Sin stock: " + estado);
             }
         }
+
     }
