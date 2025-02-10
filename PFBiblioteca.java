@@ -6,6 +6,7 @@ public class PFBiblioteca{
     private String newUserRegist;               // registo de nuevos usuarios | variable acumulada en una lista
     private String newBookRegist;                // registro de un nuevo ingreso de un libro 
     private Scanner scanner = new Scanner(System.in);
+    private String busqueda;
 
     public static void printMenu(){
         System.out.println("Bienvenido a la biblioteca virtual en Java");
@@ -21,7 +22,22 @@ public class PFBiblioteca{
             
             }
         }
+
     }    
+    public void buscarLibro(ArrayList<ArrayList<Libro>> booksStock){
+        for(int i = 0; i < booksStock.size(); i++){
+            System.out.println("***Género: " + booksStock.get(i).get(0).getGenero() + "***\n");
+            for(int j = 0; j < booksStock.get(i).size(); j++){
+                if(booksStock.get(i).get(j).getAutor().contains(busqueda)){
+                    System.out.println(booksStock.get(i).get(j).getAutor());
+                }else{
+                    continue;
+                }
+            
+            }
+        }
+
+    }
 
     public static void main(String[] args){
         //  Listas 
@@ -71,14 +87,8 @@ public class PFBiblioteca{
                 Infantiles.add(new Libro("Matilda", "Roald Dahl", "Infantiles", 5));
                 Infantiles.add(new Libro("Donde Viven los Monstruos", "Maurice Sendak", "Infantiles", 5));
                 Infantiles.add(new Libro("Alicia en el País de las Maravillas", "Lewis Carroll", "Infantiles", 5));
-
-        printMenu();
-        
-        printStock(booksStock);       
-
-        System.out.println();
-/* 
-        int userChoise = scanner.nextInt();
+    }
+    /*      
         switch (userChoise) {          
             case 1:
                     //  Buscar libro
@@ -105,6 +115,11 @@ public class PFBiblioteca{
             default:
                 System.out.println("Opción no válida, intentelo de nuevo.");
                 printMenu(scanner);
-*/
+
     }  
+    */ 
+
+
+
+
 }
