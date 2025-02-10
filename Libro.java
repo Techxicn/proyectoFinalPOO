@@ -1,67 +1,67 @@
 import java.util.ArrayList;
 
 public class Libro {
-        // Atributos
-        private String titulo;
-        private String autor;
-        private String genero;
-        private int estado;   
-    
-        // Constructor
-        public Libro(String titulo, String autor, String genero, int estado) {
-            this.titulo = titulo;
-            this.autor = autor;
-            this.genero = genero;
-            this.estado = estado;
-        }
+    // Atributos
+    private String titulo;
+    private String autor;
+    private String genero;
+    private int estado;   
 
-        public String toString(){
-            return "Título: " + titulo + "\n Autor: " + autor + "\n Género: " + genero + "\n Stock: " + estado + "\n";
-        }
-    
-        // Método para mostrar información del libro
-        public void mostrarInfo() {
-            System.out.println("Título: " + titulo);
-            System.out.println("Autor: " + autor);
-            System.out.println("Gènero " + genero);
-            if(estado>0){
-                System.out.println("En stock: " + estado);
-            }else{
-                System.out.println("Sin stock: " + estado);
-            }
-        }
+    // Constructor
+    public Libro(String titulo, String autor, String genero, int estado) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.genero = genero;
+        this.estado = estado;
+    }
 
-        public String getTitulo() {
-            return titulo;
-        }
+    public String toString(){
+        return "Título: " + titulo + "\n Autor: " + autor + "\n Género: " + genero + "\n Stock: " + estado + "\n";
+    }
 
-        public void setTitulo(String nom) {
-            this.titulo = nom;
+    // Método para mostrar información del libro
+    public void mostrarInfo() {
+        System.out.println("Título: " + titulo);
+        System.out.println("Autor: " + autor);
+        System.out.println("Gènero " + genero);
+        if(estado>0){
+            System.out.println("En stock: " + estado);
+        }else{
+            System.out.println("Sin stock: " + estado);
         }
+    }
 
-        public String getAutor() {
-            return autor;
-        }
+    public String getTitulo() {
+        return titulo;
+    }
 
-        public void setAutor(String autor) {
-            this.autor = autor;
-        }
+    public void setTitulo(String nom) {
+        this.titulo = nom;
+    }
 
-        public String getGenero() {
-            return genero;
-        }
+    public String getAutor() {
+        return autor;
+    }
 
-        public void setGenero(String genero) {
-            this.genero = genero;
-        }
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
 
-        public int getEstado() {
-            return estado;
-        }
+    public String getGenero() {
+        return genero;
+    }
 
-        public void setEstado(int estado) {
-            this.estado = estado;
-        }
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public int getEstado() {
+        return estado;
+    }
+
+    public void setEstado(int estado) {
+        this.estado = estado;
+    }
         
 
 

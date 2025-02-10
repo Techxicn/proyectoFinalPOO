@@ -21,23 +21,7 @@ public class PFBiblioteca{
             
             }
         }
-    }  
-/*    
-    public static void buscarLibro(ArrayList<ArrayList<Libro>> booksStock, Scanner scanner){
-        String busqueda = scanner.nextLine();
-        System.out.println("Resultados:");
-        for(int i = 0; i < booksStock.size(); i++){
-            for(int j = 0; j < booksStock.get(i).size(); j++){
-                //System.out.println(booksStock.get(i).get(j));
-                if(booksStock.get(i).get(j).contains(busqueda)){
-                    System.out.println(booksStock.get(i).get(j));
-                }else{
-                    continue;
-                }
-            }
-        }
-    }
-*/  
+    }    
 
     public static void main(String[] args){
         //  Listas 
