@@ -7,6 +7,7 @@ public class PFBiblioteca{
     private String newBookRegist;                // registro de un nuevo ingreso de un libro 
     private Scanner scanner = new Scanner(System.in);
     private String busqueda;
+    private int userChoise;
 
     public static void printMenu(){
         System.out.println("Bienvenido a la biblioteca virtual en Java");
@@ -88,7 +89,9 @@ public class PFBiblioteca{
                 Infantiles.add(new Libro("Donde Viven los Monstruos", "Maurice Sendak", "Infantiles", 5));
                 Infantiles.add(new Libro("Alicia en el País de las Maravillas", "Lewis Carroll", "Infantiles", 5));
     }
-    /*      
+       
+    public void seleccion(int userChoise, ArrayList<ArrayList<Libro>> booksStock){   
+        userChoise = nextLine();
         switch (userChoise) {          
             case 1:
                     //  Buscar libro
@@ -116,8 +119,9 @@ public class PFBiblioteca{
                 System.out.println("Opción no válida, intentelo de nuevo.");
                 printMenu(scanner);
 
-    }  
-    */ 
+        }  
+    }
+     
 
 
 
